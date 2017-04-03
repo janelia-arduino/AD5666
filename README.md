@@ -1,4 +1,4 @@
-#AD5666
+# AD5666
 
 Authors:
 
@@ -12,6 +12,6 @@ Provides an SPI based interface to the AD5666 Quad 16-Bit DACs.
 
 [Usage Examples](./examples)
 
-##Install Library Dependencies
+## Install Library Dependencies
 
 [arduino-libraries](https://github.com/janelia-arduino/arduino-libraries)
