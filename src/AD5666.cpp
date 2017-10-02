@@ -6,14 +6,7 @@
 // Authors:
 // Peter Polidoro polidorop@janelia.hhmi.org
 // ----------------------------------------------------------------------------
-#if defined(ARDUINO) && ARDUINO >= 100
-#include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
-#include "SPI.h"
 #include "AD5666.h"
-#include <Streaming.h>
 
 
 // Command Bits

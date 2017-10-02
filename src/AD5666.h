@@ -8,6 +8,9 @@
 // ----------------------------------------------------------------------------
 #ifndef _AD5666_H_
 #define _AD5666_H_
+#include <Arduino.h>
+#include <SPI.h>
+#include <Streaming.h>
 
 class AD5666
 {

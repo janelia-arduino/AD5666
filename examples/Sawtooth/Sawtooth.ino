@@ -1,7 +1,8 @@
-#include "Arduino.h"
+#include <Arduino.h>
 #include <SPI.h>
 #include <Streaming.h>
-#include "AD5666.h"
+#include <AD5666.h>
+
 
 #define LOOP_DELAY 10
 #define DAC_CS 53
