@@ -1,11 +1,9 @@
 #+TITLE: AD5666
 #+AUTHOR: Peter Polidoro
-#+EMAIL: polidorop@janelia.hhmi.org
-#+OPTIONS: title:t author:t email:t
+#+EMAIL: peterpolidoro@gmail.com
 
 * Library Information
   - Author :: Peter Polidoro
-  - Maintainer :: Peter Polidoro
   - License :: BSD
 
   Provides an SPI based interface to the AD5666 Quad 16-Bit DACs.
