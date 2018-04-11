@@ -3,14 +3,17 @@
 #+EMAIL: polidorop@janelia.hhmi.org
 #+OPTIONS: title:t author:t email:t
 
-* Description
+* Library Information
+  - Author :: Peter Polidoro
+  - Maintainer :: Peter Polidoro
+  - License :: BSD
 
-Provides an SPI based interface to the AD5666 Quad 16-Bit DACs.
+  Provides an SPI based interface to the AD5666 Quad 16-Bit DACs.
 
-* Examples
+* Library Examples
 
-[[./examples]]
+  [[./examples]]
 
-* Dependencies
+* Library Dependencies
 
-[[https://github.com/janelia-arduino/arduino-libraries][arduino-libraries]]
+  [[https://github.com/janelia-arduino/arduino-libraries][arduino-libraries]]
