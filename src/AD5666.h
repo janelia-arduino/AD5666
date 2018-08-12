@@ -4,7 +4,7 @@
 // Provides an SPI based interface to the AD5666 Quad 16-Bit DACs.
 //
 // Authors:
-// Peter Polidoro polidorop@janelia.hhmi.org
+// Peter Polidoro peterpolidoro@gmail.com
 // ----------------------------------------------------------------------------
 #ifndef _AD5666_H_
 #define _AD5666_H_
