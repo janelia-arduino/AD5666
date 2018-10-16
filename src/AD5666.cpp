@@ -35,7 +35,7 @@ AD5666::AD5666()
 }
 
 AD5666::AD5666(int cs_pin) :
-  cs_pin_(cs_pin)
+cs_pin_(cs_pin)
 {
   pinMode(cs_pin_,OUTPUT);
   digitalWrite(cs_pin_,HIGH);
