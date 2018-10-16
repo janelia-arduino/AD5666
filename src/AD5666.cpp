@@ -49,7 +49,9 @@ void AD5666::spiBegin()
   SPI.begin();
 }
 
-void AD5666::init(bool standalone_mode, bool ref_off, bool spi_reset)
+void AD5666::init(bool standalone_mode,
+  bool ref_off,
+  bool spi_reset)
 {
   spi_reset_ = spi_reset;
   spiBegin();
@@ -64,25 +66,26 @@ void AD5666::init(bool standalone_mode, bool ref_off, bool spi_reset)
     r_bit = 1;
   }
   // Setup DAC REF register
-  digitalWrite(cs_pin_, LOW);
+  digitalWrite(cs_pin_,LOW);
   SPI.transfer(CMD_SET_UP_DCEN_REF_REG);
   SPI.transfer(0x00);
   SPI.transfer(0x00);
   SPI.transfer((s_bit<<1) + r_bit);
-  digitalWrite(cs_pin_, HIGH);
+  digitalWrite(cs_pin_,HIGH);
   digitalRead(cs_pin_); // add some time
 
   // Power up all four DACs
-  digitalWrite(cs_pin_, LOW);
+  digitalWrite(cs_pin_,LOW);
   SPI.transfer(CMD_POWER_DOWN_UP);
   SPI.transfer(0x00);
   SPI.transfer(0x00); // Normal operation (power-on)
   SPI.transfer(0b1111); // All four DACs
-  digitalWrite(cs_pin_, HIGH);
+  digitalWrite(cs_pin_,HIGH);
   digitalRead(cs_pin_);
 }
 
-void AD5666::analogWrite(channels channel, uint16_t value)
+void AD5666::analogWrite(channels channel,
+  uint16_t value)
 {
   if (spi_reset_)
   {
@@ -108,12 +111,12 @@ void AD5666::analogWrite(channels channel, uint16_t value)
       dac = DAC_ADDRESS_ALL;
       break;
   }
-  digitalWrite(cs_pin_, LOW);
+  digitalWrite(cs_pin_,LOW);
   SPI.transfer(CMD_WRITE_N_UPDATE_N);
   SPI.transfer(((dac & 0x0f)<<4) | ((value & 0xf000)>>12));
   SPI.transfer((value & 0x0ff0)>>4);
   SPI.transfer((value & 0x000f)<<4);
-  digitalWrite(cs_pin_, HIGH);
+  digitalWrite(cs_pin_,HIGH);
   digitalRead(cs_pin_);
 }
 
